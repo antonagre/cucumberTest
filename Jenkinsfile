@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline{
 
     agent any
@@ -41,4 +42,16 @@ pipeline{
 
     }
 
+=======
+pipeline {
+  agent any
+  stages {
+    stage('') {
+      steps {
+        sh 'mvn test'
+      }
+    }
+
+  }
+>>>>>>> 962c1427d2c56f44d9e62e24673ee81e0972ccaa
 }
