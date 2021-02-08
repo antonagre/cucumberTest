@@ -1,4 +1,4 @@
-package org.example;
+package org.calc;
 
 public class Calc {
 private int result;

@@ -1,13 +1,13 @@
  Feature: add test
-  Scenario: add two numbers on the Calculator app
+  Background:
     Given that the Calculator app is running and in focus
     And there is no current value in the calculator
+
+  Scenario: add two numbers on the Calculator app
     When you add 4 and 5
     Then the value displayed should be 9
 
   Scenario Outline: check multiplication function on Calculator app
-    Given that the Calculator app is running and in focus
-    And there is no current value in the calculator
     When sum <number1> and <number2> in the calculator app
     Then the app show <result>
 
@@ -20,8 +20,6 @@
     |18|7|25|
 
   Scenario Outline: check multiplication function on Calculator app
-   Given that the Calculator app is running and in focus
-   And there is no current value in the calculator
    When multiply <number1> and <number2> in the calculator app
    Then the app show <result>
 
@@ -34,8 +32,6 @@
      |18|11|198|
 
    Scenario Outline: check multiplication function on Calculator app
-     Given that the Calculator app is running and in focus
-     And there is no current value in the calculator
      When divide <number1> by <number2> in the calculator app
      Then the app show <result>
 
@@ -48,8 +44,6 @@
        |198|18|11|
 
   Scenario Outline: check multiplication function on Calculator app
-   Given that the Calculator app is running and in focus
-   And there is no current value in the calculator
    When subtract <number1> and <number2> in the calculator app
    Then the app show <result>
 

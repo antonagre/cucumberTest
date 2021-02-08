@@ -1,4 +1,4 @@
-package org.example;
+package org.calc;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -46,9 +46,7 @@ public class StepDefinitions {
 
     @Then("the app show {int}")
     public void compareResult2(int x) {
-        int n = c.getResult();
-        System.out.println(n);
-        assertEquals(x,n);
+        assertEquals(x,c.getResult());
     }
 
     @When("you add {int} and {int}")

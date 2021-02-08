@@ -1,4 +1,4 @@
-package org.example;
+package org.calc;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
