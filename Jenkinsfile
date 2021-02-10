@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 pipeline{
 
     agent any
@@ -9,7 +8,7 @@ pipeline{
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
+                withMaven(maven: '3.6.3') {
                     sh 'mvn clean install'
 
                 }
@@ -20,7 +19,7 @@ pipeline{
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
+                withMaven(maven: '3.6.3') {
                     sh 'mvn test'
 
                 }
@@ -41,17 +40,3 @@ pipeline{
         }
 
     }
-
-=======
-pipeline {
-  agent any
-  stages {
-    stage('') {
-      steps {
-        sh 'mvn test'
-      }
-    }
-
-  }
->>>>>>> 962c1427d2c56f44d9e62e24673ee81e0972ccaa
-}
