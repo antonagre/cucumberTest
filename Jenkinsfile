@@ -1,57 +1,42 @@
-<<<<<<< HEAD
 pipeline{
 
-    agent any
+   agent any
+   tools{
+           maven '3.6.3'
+       }
 
-    stages {
+   stages {
 
         stage ('Compile Stage') {
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
-                    sh 'mvn clean install'
+                withMaven {
+                    sh 'mvn clean install -DskipTests'
 
                 }
-
             }
         }
-    stage ('Test Stage') {
+   stage ('Test Stage') {
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
-                    sh 'mvn test'
+                withMaven {
+                    sh 'mvn -Dtest=CucumberRunner test'
 
                 }
-
             }
         }
-
 
         stage ('Cucumber Reports') {
 
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'target'
+                    steps {
+                     cucumber buildStatus: "FAILED",
+                        fileIncludePattern: "**/cucumber.json",
+                        jsonReportDirectory: 'target'
 
-            }
+                    }
+                }
+           }
+   }
 
-        }
-
-    }
-
-=======
-pipeline {
-  agent any
-  stages {
-    stage('') {
-      steps {
-        sh 'mvn test'
-      }
-    }
-
-  }
->>>>>>> 962c1427d2c56f44d9e62e24673ee81e0972ccaa
-}
