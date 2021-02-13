@@ -17,7 +17,7 @@
     |5|10|15|
     |5|11|16|
     |10|12|22|
-    |18|7|25|
+    |18|7|0|
 
   Scenario Outline: check multiplication function on Calculator app
    When multiply <number1> and <number2> in the calculator app
