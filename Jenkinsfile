@@ -17,8 +17,7 @@ pipeline{
    stage ('Test Stage') {
             steps {
                 withMaven {
-                    sh 'mvn -Dtest=CucumberRunner test'
-
+                    sh 'mvn -Dtest=RunCucumberRunner test'
                 }
             }
         }
