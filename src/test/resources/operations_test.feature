@@ -7,7 +7,7 @@
     When you add 4 and 5
     Then the value displayed should be 9
 
-  Scenario Outline: check multiplication function on Calculator app
+  Scenario Outline: check sum function on Calculator app
     When sum <number1> and <number2> in the calculator app
     Then the app show <result>
 
@@ -31,7 +31,7 @@
      |10|12|120|
      |18|11|198|
 
-   Scenario Outline: check multiplication function on Calculator app
+   Scenario Outline: check division function on Calculator app
      When divide <number1> by <number2> in the calculator app
      Then the app show <result>
 
@@ -43,7 +43,7 @@
        |120|12|10|
        |198|18|11|
 
-  Scenario Outline: check multiplication function on Calculator app
+  Scenario Outline: check sub function on Calculator app
    When subtract <number1> and <number2> in the calculator app
    Then the app show <result>
 
